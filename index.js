@@ -24,10 +24,22 @@ function FirstDialog() {
 
 FirstDialog.prototype.show = function(){
   console.log('show first');
-  return dialog('First dialog', this.el)
+  this.dialog = dialog('First dialog', this.el)
     .closable()
     .overlay()
     .show();
+  return this.dialog;
+};
+
+/**
+ * Hide the dialog.
+ *
+ * @return {Dialog} for chaining
+ */
+
+FirstDialog.prototype.hide = function(){
+  if (this.dialog) this.dialog.hide();
+  return this.dialog;
 };
 
 /**
@@ -46,10 +58,22 @@ function SecondDialog() {
 
 SecondDialog.prototype.show = function(){
   console.log('show second');
-  return dialog('Second dialog', this.el)
+  this.dialog = dialog('Second dialog', this.el)
     .closable()
     .overlay()
     .show();
+  return this.dialog;
+};
+
+/**
+ * Hide the dialog.
+ *
+ * @return {Dialog} for chaining
+ */
+
+SecondDialog.prototype.hide = function(){
+  if (this.dialog) this.dialog.hide();
+  return this.dialog;
 };
 
 // create the dialogs
@@ -73,5 +97,11 @@ firstDialog
         // same as before
 
         firstDialog.show();
+        setTimeout(
+          function(){
+            firstDialog.hide();
+          },
+          1500
+        );
       });
   });

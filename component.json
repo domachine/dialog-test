@@ -1,0 +1,12 @@
+{
+  "name": "dialog-test",
+  "dependencies": {
+    "component/dialog": "*",
+    "component/domify": "*",
+    "component/query": "*"
+  },
+  "scripts": [
+    "index.js",
+    "template.js"
+  ]
+}

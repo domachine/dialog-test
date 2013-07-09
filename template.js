@@ -1,0 +1,1 @@
+module.exports = '<div id="first-form">\n  <div>\n    <p>Type something which will be rendered again at the end.</p>\n  </div>\n  <input type="text">\n</div>\n<div id="second-form">\n  <input type="text">\n</div>\n';

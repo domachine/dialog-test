@@ -4,9 +4,9 @@
  */
 
 var dialog = require('dialog')
-   , query = require('query')
-   , domify = require('domify')
-   , template = domify(require('./template'));
+  , query = require('query')
+  , domify = require('domify')
+  , template = domify(require('./template'));
 
 /**
  * Represents a first example dialog.
